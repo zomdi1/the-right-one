@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8">
+<title>Kaws Hotel</title>
+<link rel="stylesheet" href="hotel.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    </head>
+<body>
+<div class="row">
+<img id="hotelpic" src="Untitled2.jpg" alt="Banner" class="top" />
+<img id="logo" src="logo_transparent.png" class="logotop" alt="logo" />
+    </div>
+    <div class="buttons">
+        <a href="hotelhitta.html"  class=myButton>Hitta/Kontakt</a>
+        
+        <a href="hotelboka.html" class=myButton>Boka</a>
+        
+        <a href="info.html" class=myButton >Info</a>
+        
+        <a href="aktivteter.html"  class=myButton>Aktiviteter</a>
+    </div> 
+    
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="ho.jpg" style="width:100%" alt="Hotel">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="food.jpg" style="width:100%" alt="Resturant">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="pool.jpg" style="width:100%" alt="Pool">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+<div class="word">
+<p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit enim erat, ac condimentum felis convallis ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ligula turpis, sagittis et elit sed, sodales tristique lorem. Pellentesque vel purus neque. Nulla et metus elit. Integer congue tellus tellus, vel fringilla nisl vulputate ac. Quisque non aliquam metus. Nulla sagittis dui feugiat pellentesque sollicitudin. Phasellus ultricies ipsum mi, sed sollicitudin purus pulvinar sit amet. Maecenas fringilla tincidunt elit, eu convallis nibh aliquet et. Quisque vestibulum ante ac quam sollicitudin hendrerit. Integer congue tellus tellus, vel fringilla nisl vulputate ac. Quisque non aliquam metus. Nulla sagittis dui feugiat pellentesque sollicitudin. Phasellus ultricies ipsum mi, sed sollicitudin purus pulvinar sit amet.Integer congue tellus tellus, vel fringilla nisl vulputate ac. Quisque non aliquam metus. Nulla sagittis dui feugiat pellentesque sollicitudin. Phasellus ultricies ipsum mi, sed sollicitudin purus pulvinar sit amet.</p>
+</div>  
+    
+    
+    
+
+<footer>
+<div class="sidfot"> 
+    <img id="logo2" src="logo_transparent.png" class="sidfot2" alt="logo2"/><br>
+    <p class="p3">Plaza Blas Infante 11, Estepona, Spanien</p> 
+    <p class="p2">kawshotel@gmail.com</p>
+    <p class="p4">xxx - xxx xx xx</p>
+</div>
+</footer>
+    </body>
